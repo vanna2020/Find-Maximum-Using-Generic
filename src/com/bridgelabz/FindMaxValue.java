@@ -2,7 +2,15 @@ package com.bridgelabz;
 /**
  * Purpose - To find maximum value using generics
  */
-public class FindMaxValue {
+public class FindMaxValue<T extends Comparable<T>> {
+
+    T a1, a2, a3;
+
+    public FindMaxValue(T a1, T a2, T a3) {
+        this.a1 = a1;
+        this.a2 = a2;
+        this.a3 = a3;
+    }
 
     /**
      * Generic method to compare any type of data and find maximum
