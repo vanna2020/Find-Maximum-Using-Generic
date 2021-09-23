@@ -2,11 +2,10 @@ package com.bridgelabz;
 import java.util.Arrays;
 
 /**
- * Purpose - To find maximum value and increasing the parameter size using generics
+ * Purpose - To find maximum value and increasing the parameter size using generics.
  */
 
 public class FindMaxValue<T extends Comparable<T>> {
-
     T[] elements;
 
     public FindMaxValue(T[] elements) {
@@ -16,7 +15,7 @@ public class FindMaxValue<T extends Comparable<T>> {
     /**
      * Generic method to store values in array and return maximum value.
      * We can store any size parameter
-     *  elements : Stores the array value and compare it
+     *  elements : Stores the value  in the array and compare it
      * @return max : Maximum of three values
      */
 
@@ -24,16 +23,17 @@ public class FindMaxValue<T extends Comparable<T>> {
         Arrays.sort(elements);
         int lenght = elements.length;
         T max = elements[lenght - 1];
+        System.out.printf("\nThe Maximum value in all of them is : %s ", max);
         return max;
     }
 
     public static void main(String[] args) {
-        System.out.println("Welcome To Find Maximun Problem Using Generics \n");
+        System.out.println("Welcome To Find Maximun Problem Using Generics");
         Integer[] intMax = { 10, 24, 68, 80, 42, 46, 12, 58 };
-        System.out.println("The maximum value between the three integer is : " + maxOfValues(intMax)+ "\n");
+        maxOfValues(intMax);
         Float[] floatMax = { 1.4f, 87.3f, 81.8f, 40.2f, 4.6f };
-        System.out.println("The maximum value between the three float is : " + maxOfValues(floatMax)+ "\n");
+        maxOfValues(floatMax);
         String[] stringMax = { "ABC", "IJK", "PQR", "BCD", "MNO", "LMN", "RST", "XYZ" };
-        System.out.println("The maximum value between the three string is : " + maxOfValues(stringMax));
+        maxOfValues(stringMax);
     }
 }
